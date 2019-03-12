@@ -1,0 +1,45 @@
+{
+	"id": "GKW-2000D",
+	"name": {
+		"en": "KeyWe Z-Wave Locks"
+	},
+	"zwave": {
+		"manufacturerId": [891],
+		"productTypeId": [2],
+		"productId": [1],
+		"learnmode": {
+			"image": "/drivers/GKW-2000D/assets/learnmode.svg",
+			"instruction": {
+				"en": "Press the S button in battery compartment, followed by [Master Code] # 8 8 *"
+			}
+		},
+		"unlearnmode": {
+			"image": "/drivers/GKW-2000D/assets/learnmode.svg",
+			"instruction": {
+				"en": "Press the S button in battery compartment, followed by [Master Code] # 9 9 *"
+			}
+		},
+		"associationGroups": [
+			1
+		],
+		"associationGroupsOptions": {
+			"1": {
+				"hint": {
+					"en": "Lifeline Group"
+				}
+			}
+		}
+	},
+	"class": "lock",
+	"capabilities": [
+		"locked",
+		"measure_battery"
+	],
+	"icon": "/drivers/GKW-2000D/assets/icon.svg",
+	"images": {
+		"large": "/drivers/GKW-2000D/assets/images/large.jpg",
+		"small": "/drivers/GKW-2000D/assets/images/small.jpg"
+	},
+	"settings": [
+	]
+}

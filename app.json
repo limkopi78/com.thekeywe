@@ -1,0 +1,235 @@
+{
+  "id": "com.thekeywe",
+  "sdk": 2,
+  "name": {
+    "en": "KeyWe Z-Wave Locks"
+  },
+  "version": "1.0.0",
+  "compatibility": ">=1.5.2",
+  "author": {
+    "name": "Mike Lim",
+    "email": "mike.lim@automate.asia"
+  },
+  "contributors": {
+    "developers": [
+      {
+        "name": "Mike Lim"
+      }
+    ]
+  },
+  "description": {
+    "en": "Adds support for KeyWe Z-Wave enabled locks"
+  },
+  "images": {
+    "large": "/assets/images/large.png",
+    "small": "/assets/images/small.png"
+  },
+  "category": [
+    "security"
+  ],
+  "tags": {
+    "en": [
+      "door lock",
+      "KeyWe",
+      "Z-wave"
+    ]
+  },
+  "flow": {
+    "triggers": [
+      {
+        "id": "button_unlocked",
+        "title": {
+          "en": "Unlocked by button"
+        },
+        "args": [
+          {
+            "name": "device",
+            "type": "device",
+            "filter": "driver_id=GKW-2000D"
+          }
+        ]
+      },
+      {
+        "id": "button_locked",
+        "title": {
+          "en": "Locked by button"
+        },
+        "args": [
+          {
+            "name": "device",
+            "type": "device",
+            "filter": "driver_id=GKW-2000D"
+          }
+        ]
+      },
+      {
+        "id": "user_unlocked",
+        "title": {
+          "en": "Unlocked by user"
+        },
+        "tokens": [
+          {
+            "name": "userslot",
+            "type": "number",
+            "title": {
+              "en": "User Slot"
+            },
+            "example": {
+              "en": "1"
+            }
+          }
+        ],
+        "args": [
+          {
+            "name": "device",
+            "type": "device",
+            "filter": "driver_id=GKW-2000D"
+          }
+        ]
+      },
+      {
+        "id": "keypad_locked",
+        "title": {
+          "en": "Locked by keypad"
+        },
+        "args": [
+          {
+            "name": "device",
+            "type": "device",
+            "filter": "driver_id=GKW-2000D"
+          }
+        ]
+      },
+      {
+        "id": "manual_unlocked",
+        "title": {
+          "en": "Unlocked by key/thumbturn"
+        },
+        "args": [
+          {
+            "name": "device",
+            "type": "device",
+            "filter": "driver_id=GKW-2000D"
+          }
+        ]
+      },
+      {
+        "id": "manual_locked",
+        "title": {
+          "en": "Locked by key/thumbturn"
+        },
+        "args": [
+          {
+            "name": "device",
+            "type": "device",
+            "filter": "driver_id=GKW-2000D"
+          }
+        ]
+      },
+      {
+        "id": "auto_locked",
+        "title": {
+          "en": "Autolocked"
+        },
+        "args": [
+          {
+            "name": "device",
+            "type": "device",
+            "filter": "driver_id=GKW-2000D"
+          }
+        ]
+      },
+      {
+        "id": "deadbolt_jammed",
+        "title": {
+          "en": "Deadbolt Jammed"
+        },
+        "args": [
+          {
+            "name": "device",
+            "type": "device",
+            "filter": "driver_id=GKW-2000D"
+          }
+        ]
+      },
+      {
+        "id": "wireless_unlocked",
+        "title": {
+          "en": "Unlocked by Bluetooth/Z-Wave"
+        },
+        "args": [
+          {
+            "name": "device",
+            "type": "device",
+            "filter": "driver_id=GKW-2000D"
+          }
+        ]
+      },
+      {
+        "id": "wireless_locked",
+        "title": {
+          "en": "Locked by Bluetooth/Z-Wave"
+        },
+        "args": [
+          {
+            "name": "device",
+            "type": "device",
+            "filter": "driver_id=GKW-2000D"
+          }
+        ]
+      }
+    ]
+  },
+  "drivers": [
+    {
+      "id": "GKW-2000D",
+      "name": {
+        "en": "KeyWe Z-Wave Locks"
+      },
+      "zwave": {
+        "manufacturerId": [
+          891
+        ],
+        "productTypeId": [
+          2
+        ],
+        "productId": [
+          1
+        ],
+        "learnmode": {
+          "image": "/drivers/GKW-2000D/assets/learnmode.svg",
+          "instruction": {
+            "en": "Press the S button in battery compartment, followed by [Master Code] # 8 8 *"
+          }
+        },
+        "unlearnmode": {
+          "image": "/drivers/GKW-2000D/assets/learnmode.svg",
+          "instruction": {
+            "en": "Press the S button in battery compartment, followed by [Master Code] # 9 9 *"
+          }
+        },
+        "associationGroups": [
+          1
+        ],
+        "associationGroupsOptions": {
+          "1": {
+            "hint": {
+              "en": "Lifeline Group"
+            }
+          }
+        }
+      },
+      "class": "lock",
+      "capabilities": [
+        "locked",
+        "measure_battery"
+      ],
+      "icon": "/drivers/GKW-2000D/assets/icon.svg",
+      "images": {
+        "large": "/drivers/GKW-2000D/assets/images/large.jpg",
+        "small": "/drivers/GKW-2000D/assets/images/small.jpg"
+      },
+      "settings": []
+    }
+  ]
+}

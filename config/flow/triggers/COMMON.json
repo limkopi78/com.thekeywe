@@ -1,0 +1,144 @@
+[
+  {
+    "id": "button_unlocked",
+    "title": {
+      "en": "Unlocked by button"
+    },
+    "args": [
+      {
+        "name": "device",
+        "type": "device",
+        "filter": "driver_id=GKW-2000D"
+      }
+    ]
+  },
+  {
+    "id": "button_locked",
+    "title": {
+      "en": "Locked by button"
+    },
+    "args": [
+      {
+        "name": "device",
+        "type": "device",
+        "filter": "driver_id=GKW-2000D"
+      }
+    ]
+  },
+  {
+    "id": "user_unlocked",
+    "title": {
+      "en": "Unlocked by user"
+    },
+    "tokens": [
+          {
+            "name": "userslot",
+            "type": "number",
+            "title": {
+              "en": "User Slot"
+            },
+            "example": {
+              "en": "1"
+            }
+          }
+        ],
+    "args": [
+      {
+        "name": "device",
+        "type": "device",
+        "filter": "driver_id=GKW-2000D"
+      }
+    ]
+  },
+  {
+    "id": "keypad_locked",
+    "title": {
+      "en": "Locked by keypad"
+    },
+    "args": [
+      {
+        "name": "device",
+        "type": "device",
+        "filter": "driver_id=GKW-2000D"
+      }
+    ]
+  },
+  {
+    "id": "manual_unlocked",
+    "title": {
+      "en": "Unlocked by key/thumbturn"
+    },
+    "args": [
+      {
+        "name": "device",
+        "type": "device",
+        "filter": "driver_id=GKW-2000D"
+      }
+    ]
+  },
+  {
+    "id": "manual_locked",
+    "title": {
+      "en": "Locked by key/thumbturn"
+    },
+    "args": [
+      {
+        "name": "device",
+        "type": "device",
+        "filter": "driver_id=GKW-2000D"
+      }
+    ]
+  },
+  {
+    "id": "auto_locked",
+    "title": {
+      "en": "Autolocked"
+    },
+    "args": [
+      {
+        "name": "device",
+        "type": "device",
+        "filter": "driver_id=GKW-2000D"
+      }
+    ]
+  },
+  {
+    "id": "deadbolt_jammed",
+    "title": {
+      "en": "Deadbolt Jammed"
+    },
+    "args": [
+      {
+        "name": "device",
+        "type": "device",
+        "filter": "driver_id=GKW-2000D"
+      }
+    ]
+  },
+  {
+    "id": "wireless_unlocked",
+    "title": {
+      "en": "Unlocked by Bluetooth/Z-Wave"
+    },
+    "args": [
+      {
+        "name": "device",
+        "type": "device",
+        "filter": "driver_id=GKW-2000D"
+      }
+    ]
+  },
+  {
+    "id": "wireless_locked",
+    "title": {
+      "en": "Locked by Bluetooth/Z-Wave"
+    },
+    "args": [
+      {
+        "name": "device",
+        "type": "device",
+        "filter": "driver_id=GKW-2000D"
+      }
+    ]
+  }
+]
